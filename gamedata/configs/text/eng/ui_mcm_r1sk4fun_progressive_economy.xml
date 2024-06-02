@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+	<string id="ui_mcm_progressive_economy_title">
+		<text>Progressive Economy</text>
+	</string>
+	<string id="ui_mcm_menu_progressive_economy">
+		<text>Progressive Economy</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_days_to_increment">
+		<text>Prices growth speed (in-game days)</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_days_to_increment_desc">
+		<text>Prices will grow every X in-game days.</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_modifier_grow">
+		<text>Prices growth modifier (0.01 = 1%)</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_modifier_grow_desc">
+		<text>Percentage by which prices will grow.</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_multiplier_max">
+		<text>Maximum multiplier value (1 = 100%)</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_multiplier_max_desc">
+		<text>Prices will stop growing after the multiplier reaches this value.</text>
+	</string>
+</string_table>
