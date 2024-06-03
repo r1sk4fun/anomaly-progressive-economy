@@ -37,9 +37,7 @@ function ActorMenu_on_trade_started()
         modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
     end
 
-    if modifier_increment > 0 then
-        multiplier = 1 + (settings.growth_modifier * modifier_increment)
-    end
+    multiplier = 1 + (settings.growth_modifier * modifier_increment)
 end
 
 
