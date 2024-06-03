@@ -1,6 +1,3 @@
-local multiplier = 1
-
-
 function load_defaults()
 	local t = {}
 	local op = progressive_economy_mcm.op
@@ -24,36 +21,79 @@ function load_settings()
 	return settings
 end
 
+local modifier_increment = 0
+
+local modifiers_table = {
+    ["food_modifier"] = {
+        ["i_food"] = true,
+        ["i_drink"] = true,
+        ["i_mutant_raw"] = true,
+        ["i_mutant_cooked"] = true
+    },
+
+    ["medicine_modifier"] = {
+        ["i_medical"] = true
+    },
+
+    ["ammo_modifier"] = {
+        ["w_ammo"] = true,
+        ["w_explosive"] = true
+    },
+
+    ["tools_modifier"] = {
+        ["i_tool"] = true,
+        ["i_repair"] = true,
+        ["i_kit"] = true
+    },
+
+    ["weapons_modifier"] = {
+        ["w_melee"] = true,
+        ["w_pistol"] = true,
+        ["w_rifle"] = true,
+        ["w_smg"] = true,
+        ["w_shotgun"] = true,
+        ["w_sniper"] = true
+    },
+
+    ["outfits_modifier"] = {
+        ["o_light"] = true,
+        ["o_medium"] = true,
+        ["o_heavy"] = true,
+        ["o_sci"] = true,
+        ["o_helmet"] = true
+    }
+}
+
+function get_modifier_by_kind(kind, modifiers_table)
+    for modifier_key, kinds_table in pairs(modifiers_table) do
+        for kind_key, _ in pairs(kinds_table) do
+            if kind_key == kind then
+                return settings[modifier_key]
+            end
+        end
+    end
+    return settings.general_modifier
+end
+
 
 function ActorMenu_on_trade_started()
-    local modifier_increment = 0
-
-    -- in-game time in seconds since the start of the playthrough
-    local ingame_time_sec = game.get_game_time():diffSec(level.get_start_time())
-    -- convert in-game time to days
-    local ingame_time_days = math.floor(ingame_time_sec / 86400)
-
-    if ingame_time_days > 0 then
-        modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
-    end
-
-    multiplier = 1 + (settings.growth_modifier * modifier_increment)
+    -- in-game time in days since the start of the playthrough
+    local ingame_time_days = math.floor(game.get_game_time():diffSec(level.get_start_time()) / 86400)
+    -- number of increaments since the start of the playthrough
+    modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
 end
 
 
 function on_get_item_cost(_, obj, profile, calculated_cost, ret)
-    if multiplier == 1 then -- to avoid doing extra work
-        return
-    end
-
     if profile.mode == 2 then -- buying from npc
         local obj_kind = SYS_GetParam(0, obj:section(), "kind")    
         local old_cost = ret.new_cost or calculated_cost
-
+        
+        local multiplier = 1 + (get_modifier_by_kind(obj_kind, modifiers_table) * modifier_increment)
         ret.new_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.max_multiplier))
 
         if settings.debug_mode then
-            printf("item %s, kind %s, old cost %s, new cost %s", obj:section(), obj_kind, old_cost, ret.new_cost)
+            printf("item: %s, kind: %s, old cost: %s, new cost: %s", obj:section(), obj_kind, old_cost, ret.new_cost)
         end
     end
 end
