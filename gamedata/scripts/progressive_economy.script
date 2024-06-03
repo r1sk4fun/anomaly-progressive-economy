@@ -101,7 +101,7 @@ end
 
 function on_game_start()
     RegisterScriptCallback("ActorMenu_on_trade_started", ActorMenu_on_trade_started)
-	RegisterScriptCallback("on_get_item_cost", on_get_item_cost)
+    RegisterScriptCallback("on_get_item_cost", on_get_item_cost)
     RegisterScriptCallback("on_option_change", load_settings)
     load_settings()
 end
