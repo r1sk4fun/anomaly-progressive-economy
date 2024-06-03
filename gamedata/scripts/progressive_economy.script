@@ -79,7 +79,7 @@ end
 function ActorMenu_on_trade_started()
     -- in-game time in days since the start of the playthrough
     local ingame_time_days = math.floor(game.get_game_time():diffSec(level.get_start_time()) / 86400)
-    -- number of increaments since the start of the playthrough
+    -- number of increments since the start of the playthrough
     modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
 end
 
