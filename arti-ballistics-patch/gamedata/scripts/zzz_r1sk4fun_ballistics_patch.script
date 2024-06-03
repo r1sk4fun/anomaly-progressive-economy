@@ -1,0 +1,3 @@
+function on_game_start()
+    if ballistics_utils then UnregisterScriptCallback("on_get_item_cost", ballistics_utils.on_get_item_cost) end
+end

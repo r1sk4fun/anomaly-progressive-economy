@@ -1,25 +1,27 @@
-# What is this mod about?
+# Progressive Economy
+
+## What is this mod about?
 
 This mod was created to make economy more difficult. The aim of the mod is to imitate real life inflation. By default prices will grow once in 5 days by 5% with maximum of 200%. But you can tweak it in MCM settings as you like.
 
-# Requirements
+## Requirements
 
 Mod Configuration Menu (MCM) by RavenAscendant
 
-# How to install?
+## How to install?
 
 Install this mod via MO2 or just by manually dropping gamedata into your Anomaly folder.
 
-# Compatibility
+## Compatibility
 
-Should be compatible with everything. If you face any issues let me know.
+Patch for Anomaly Ballistics by arti included.
 
-# Credits
+Should be compatible with everything else (even with mods like Faction Based Economy). If you face any issues let me know.
 
-**Thanks to Dead Air devs for the inspiration.**
+## Credit
 
-**Thanks to HarukaSai for «Faction Based Economy».**
+- **Dead Air - Inspiration.**
 
-**Thanks to TheMrDemonized for «Configurable Item Cost Modifiers».**
+- **TheMrDemonized - Borrowed code from Configurable Item Cost Modifiers.**
 
-Without you this would not have been possible!
+- **HarukaSai - Borrowed code from Faction Based Economy.**
