@@ -39,7 +39,7 @@ jobs:
         uses: "marvinpinto/action-automatic-releases@v1.2.1"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: ${{ github.event_name == 'push' && 'latest' || 'pre-release' }}
+          automatic_release_tag: ${{ github.event_name == 'push' && 'release' || 'pre-release' }}
           prerelease: ${{ github.event_name != 'push' }}
           files: |
             *.zip
