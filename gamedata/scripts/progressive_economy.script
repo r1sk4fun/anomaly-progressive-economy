@@ -25,7 +25,7 @@ function load_settings()
 end
 
 
-local function update_multiplier(days_to_increment, modifier_grow)
+function ActorMenu_on_trade_started()
     local modifier_increment = 0
 
     -- in-game time in seconds since the start of the playthrough
@@ -34,17 +34,12 @@ local function update_multiplier(days_to_increment, modifier_grow)
     local ingame_time_days = math.floor(ingame_time_sec / 86400)
 
     if ingame_time_days > 0 then
-        modifier_increment = math.floor(ingame_time_days / days_to_increment)
+        modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
     end
 
     if modifier_increment > 0 then
-        multiplier = 1 + (modifier_grow * modifier_increment)
+        multiplier = 1 + (settings.modifier_grow * modifier_increment)
     end
-end
-
-
-function ActorMenu_on_trade_started()
-    update_multiplier(settings.days_to_increment, settings.modifier_grow)
 end
 
 
