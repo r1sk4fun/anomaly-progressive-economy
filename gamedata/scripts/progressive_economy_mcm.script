@@ -4,8 +4,15 @@ op = { id = op_id , sh = true, gr =
 		{
 			{ id = "title",						type = "slide", link = "ui_options_slider_economy_diff", text = "ui_mcm_" .. op_id .. "_title", size = {512,50}, spacing = 20 },
 			{ id = "days_to_increment",			type = "track", val = 2, min = 1, max = 28, step = 1, def = 5},
-			{ id = "growth_modifier",				type = "track", val = 2, min = 0.01, max = 1, step = 0.01, def = 0.05},
-			{ id = "max_multiplier",			type = "track", val = 2, min = 1, max = 10, step = 0.1, def = 2},
+			{ id = "max_multiplier",			type = "track", val = 2, min = 1, max = 10, step = 0.1, def = 5},
+			{ id = "line", 						type = "line"},
+			{ id = "food_modifier",				type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "medicine_modifier",			type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "ammo_modifier",				type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "tools_modifier",			type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "weapons_modifier",			type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "outfits_modifier",			type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
+			{ id = "general_modifier",			type = "track", val = 2, min = 0, max = 1, step = 0.01, def = 0.05},
 			{ id = "line", 						type = "line" },
 			{ id = "debug_mode", 				type = "check", val = 1, def = false}
 		}
