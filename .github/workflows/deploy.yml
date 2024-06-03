@@ -31,7 +31,7 @@ jobs:
         run: echo "::set-output name=today::$(date +'%Y.%m.%d')"
         
       - name: Zip folder
-        run: zip -r $RELEASE_NAME.zip gamedata
+        run: zip -r $RELEASE_NAME.zip gamedata arti-ballistics-patch fomod
         env: 
           RELEASE_NAME: ${{ github.event.repository.name }}.${{ steps.date.outputs.today }}
       
