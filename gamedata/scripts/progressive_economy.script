@@ -1,12 +1,31 @@
 local multiplier = 1
 
--- MCM options
-local days_to_increment = 5
-local modifier_grow = 0.05
-local multiplier_max = 2
+
+function load_defaults()
+	local t = {}
+	local op = progressive_economy_mcm.op
+	for i, v in ipairs(op.gr) do
+		if v.def ~= nil then
+			t[v.id] = v.def
+		end
+	end
+	return t
+end
+
+settings = load_defaults()
+
+function load_settings()
+	settings = load_defaults()
+	if ui_mcm then
+		for k, v in pairs(settings) do
+			settings[k] = ui_mcm.get(progressive_economy_mcm.op_id .. "/" .. k)
+		end
+	end
+	return settings
+end
 
 
-local function update_multiplier(days_to_increment, modifier_grow)
+function ActorMenu_on_trade_started()
     local modifier_increment = 0
 
     -- in-game time in seconds since the start of the playthrough
@@ -15,43 +34,34 @@ local function update_multiplier(days_to_increment, modifier_grow)
     local ingame_time_days = math.floor(ingame_time_sec / 86400)
 
     if ingame_time_days > 0 then
-        modifier_increment = math.floor(ingame_time_days / days_to_increment)
+        modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
     end
 
-    if modifier_increment > 0 then
-        multiplier = 1 + (modifier_grow * modifier_increment)
-    end
+    multiplier = 1 + (settings.growth_modifier * modifier_increment)
 end
 
 
-function ActorMenu_on_trade_started()
-    update_multiplier(days_to_increment, modifier_grow)
-end
-
-
-function on_get_item_cost(_, obj, profile, cost, ret)
+function on_get_item_cost(_, obj, profile, calculated_cost, ret)
     if multiplier == 1 then -- to avoid doing extra work
         return
     end
 
     if profile.mode == 2 then -- buying from npc
-        local item_cost = ret.new_cost or cost
-        item_cost = math.ceil(item_cost * clamp(multiplier, 1, multiplier_max))
-        ret.new_cost = item_cost
+        local obj_kind = SYS_GetParam(0, obj:section(), "kind")    
+        local old_cost = ret.new_cost or calculated_cost
+
+        ret.new_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.max_multiplier))
+
+        if settings.debug_mode then
+            printf("item %s, kind %s, old cost %s, new cost %s", obj:section(), obj_kind, old_cost, ret.new_cost)
+        end
     end
-end
-
-
-function on_option_change()
-	days_to_increment = progressive_economy_mcm.get_config("days_to_increment")
-	modifier_grow = progressive_economy_mcm.get_config("modifier_grow")
-	multiplier_max = progressive_economy_mcm.get_config("multiplier_max")
 end
 
 
 function on_game_start()
     RegisterScriptCallback("ActorMenu_on_trade_started", ActorMenu_on_trade_started)
 	RegisterScriptCallback("on_get_item_cost", on_get_item_cost)
-    RegisterScriptCallback("on_option_change", on_option_change)
-    on_option_change()
+    RegisterScriptCallback("on_option_change", load_settings)
+    load_settings()
 end

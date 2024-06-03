@@ -16,6 +16,10 @@ Should be compatible with everything. If you face any issues let me know.
 
 # Credits
 
-Thanks to Dead Air devs for the inspiration.
+**Thanks to Dead Air devs for the inspiration.**
 
-Big thanks to HarukaSai for «Faction Based Economy» mod which I used as a base.
+**Thanks to HarukaSai for «Faction Based Economy».**
+
+**Thanks to TheMrDemonized for «Configurable Item Cost Modifiers».**
+
+Without you this would not have been possible!

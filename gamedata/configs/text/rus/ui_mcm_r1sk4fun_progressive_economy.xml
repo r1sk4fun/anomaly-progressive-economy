@@ -13,16 +13,19 @@
 	<string id="ui_mcm_progressive_economy_days_to_increment_desc">
 		<text>Цены будут расти каждые X игровых дней.</text>
 	</string>
-	<string id="ui_mcm_progressive_economy_modifier_grow">
+	<string id="ui_mcm_progressive_economy_growth_modifier">
 		<text>Модификатор роста цен (0.01 = 1%)</text>
 	</string>
-	<string id="ui_mcm_progressive_economy_modifier_grow_desc">
+	<string id="ui_mcm_progressive_economy_growth_modifier_desc">
 		<text>Процент, на который будут расти цены.</text>
 	</string>
-	<string id="ui_mcm_progressive_economy_multiplier_max">
+	<string id="ui_mcm_progressive_economy_max_multiplier">
 		<text>Максимальное значение мультипликатора (1 = 100%)</text>
 	</string>
-	<string id="ui_mcm_progressive_economy_multiplier_max_desc">
+	<string id="ui_mcm_progressive_economy_max_multiplier_desc">
 		<text>Цены перестанут расти после достижения мультипликатором данного значения.</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_debug_mode">
+		<text>Включить режим отладки</text>
 	</string>
 </string_table>
