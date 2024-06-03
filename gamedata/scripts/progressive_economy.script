@@ -1,9 +1,28 @@
 local multiplier = 1
 
--- MCM options
-local days_to_increment = 5
-local modifier_grow = 0.05
-local multiplier_max = 2
+
+function load_defaults()
+	local t = {}
+	local op = progressive_economy_mcm.op
+	for i, v in ipairs(op.gr) do
+		if v.def ~= nil then
+			t[v.id] = v.def
+		end
+	end
+	return t
+end
+
+settings = load_defaults()
+
+function load_settings()
+	settings = load_defaults()
+	if ui_mcm then
+		for k, v in pairs(settings) do
+			settings[k] = ui_mcm.get(progressive_economy_mcm.op_id .. "/" .. k)
+		end
+	end
+	return settings
+end
 
 
 local function update_multiplier(days_to_increment, modifier_grow)
@@ -25,7 +44,7 @@ end
 
 
 function ActorMenu_on_trade_started()
-    update_multiplier(days_to_increment, modifier_grow)
+    update_multiplier(settings.days_to_increment, settings.modifier_grow)
 end
 
 
@@ -36,22 +55,15 @@ function on_get_item_cost(_, obj, profile, cost, ret)
 
     if profile.mode == 2 then -- buying from npc
         local item_cost = ret.new_cost or cost
-        item_cost = math.ceil(item_cost * clamp(multiplier, 1, multiplier_max))
+        item_cost = math.ceil(item_cost * clamp(multiplier, 1, settings.multiplier_max))
         ret.new_cost = item_cost
     end
-end
-
-
-function on_option_change()
-	days_to_increment = progressive_economy_mcm.get_config("days_to_increment")
-	modifier_grow = progressive_economy_mcm.get_config("modifier_grow")
-	multiplier_max = progressive_economy_mcm.get_config("multiplier_max")
 end
 
 
 function on_game_start()
     RegisterScriptCallback("ActorMenu_on_trade_started", ActorMenu_on_trade_started)
 	RegisterScriptCallback("on_get_item_cost", on_get_item_cost)
-    RegisterScriptCallback("on_option_change", on_option_change)
-    on_option_change()
+    RegisterScriptCallback("on_option_change", load_settings)
+    load_settings()
 end
