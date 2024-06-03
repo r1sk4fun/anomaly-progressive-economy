@@ -43,15 +43,21 @@ function ActorMenu_on_trade_started()
 end
 
 
-function on_get_item_cost(_, obj, profile, cost, ret)
+function on_get_item_cost(_, obj, profile, calculated_cost, ret)
     if multiplier == 1 then -- to avoid doing extra work
         return
     end
 
     if profile.mode == 2 then -- buying from npc
-        local item_cost = ret.new_cost or cost
-        item_cost = math.ceil(item_cost * clamp(multiplier, 1, settings.multiplier_max))
-        ret.new_cost = item_cost
+        local obj_kind = SYS_GetParam(0, obj:section(), "kind")    
+        local old_cost = ret.new_cost or calculated_cost
+
+        old_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.multiplier_max))
+        ret.new_cost = old_cost
+
+        if settings.debug_mode then
+            printf("item %s, kind %s, old cost %s, new cost %s", obj:section(), obj_kind, old_cost, ret.new_cost)
+        end
     end
 end
 

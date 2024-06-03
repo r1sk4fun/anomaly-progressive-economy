@@ -25,4 +25,7 @@
 	<string id="ui_mcm_progressive_economy_multiplier_max_desc">
 		<text>Цены перестанут расти после достижения мультипликатором данного значения.</text>
 	</string>
+	<string id="ui_mcm_progressive_economy_debug_mode">
+		<text>Включить режим отладки</text>
+	</string>
 </string_table>

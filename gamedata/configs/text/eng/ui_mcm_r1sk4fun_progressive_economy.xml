@@ -25,4 +25,7 @@
 	<string id="ui_mcm_progressive_economy_multiplier_max_desc">
 		<text>Prices will stop growing after the multiplier reaches this value.</text>
 	</string>
+	<string id="ui_mcm_progressive_economy_debug_mode">
+		<text>Enable Debug Mode</text>
+	</string>
 </string_table>
