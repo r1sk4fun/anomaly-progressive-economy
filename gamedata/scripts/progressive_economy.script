@@ -38,7 +38,7 @@ function ActorMenu_on_trade_started()
     end
 
     if modifier_increment > 0 then
-        multiplier = 1 + (settings.modifier_grow * modifier_increment)
+        multiplier = 1 + (settings.growth_modifier * modifier_increment)
     end
 end
 
@@ -52,7 +52,7 @@ function on_get_item_cost(_, obj, profile, calculated_cost, ret)
         local obj_kind = SYS_GetParam(0, obj:section(), "kind")    
         local old_cost = ret.new_cost or calculated_cost
 
-        old_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.multiplier_max))
+        old_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.max_multiplier))
         ret.new_cost = old_cost
 
         if settings.debug_mode then
