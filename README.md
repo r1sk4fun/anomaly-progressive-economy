@@ -2,7 +2,7 @@
 
 ## What is this mod about?
 
-This mod was created to make economy more difficult. The aim of the mod is to imitate real life inflation. By default prices will grow once in 5 days by 5% with maximum of 500%. But you can tweak it in MCM settings as you like.
+This mod was created to make economy more difficult. The aim of the mod is to imitate real life inflation. By default prices will grow once in 5 days by 5% with maximum of 200%. But you can tweak it in MCM settings as you like.
 
 ## Requirements
 
