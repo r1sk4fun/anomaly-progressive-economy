@@ -11,28 +11,31 @@
 		<text>Скорость роста цен (в игровых днях)</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_max_multiplier">
-		<text>Максимальный множитель для цен (1 = 100%)</text>
+		<text>Потолок роста цен (1 = 100%)</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_modifiers_help">
+		<text>Категории товаров (0.01 = 1%)</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_food_modifier">
-		<text>Цены на еду будут расти на (0.01 = 1%)</text>
+		<text>Цены на еду будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_medicine_modifier">
-		<text>Цены на медикаменты будут расти на (0.01 = 1%)</text>
+		<text>Цены на медикаменты будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_ammo_modifier">
-		<text>Цены на патроны и взрывчатку будут расти на (0.01 = 1%)</text>
+		<text>Цены на патроны и взрывчатку будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_tools_modifier">
-		<text>Цены на инструменты будут расти на (0.01 = 1%)</text>
+		<text>Цены на инструменты будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_weapons_modifier">
-		<text>Цены на оружие будут расти на (0.01 = 1%)</text>
+		<text>Цены на оружие будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_outfits_modifier">
-		<text>Цены на костюмы будут расти на (0.01 = 1%)</text>
+		<text>Цены на костюмы будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_general_modifier">
-		<text>Остальные цены будут расти на (0.01 = 1%)</text>
+		<text>Остальные цены будут расти на</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_debug_mode">
 		<text>Включить режим отладки</text>

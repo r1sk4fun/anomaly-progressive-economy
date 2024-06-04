@@ -8,31 +8,34 @@
 		<text>Progressive Economy</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_days_to_increment">
-		<text>Prices growth speed (in-game days)</text>
+		<text>Price growth speed (in-game days)</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_max_multiplier">
-		<text>Maximum price multiplier (1 = 100%)</text>
+		<text>Price ceiling (1 = 100%)</text>
+	</string>
+	<string id="ui_mcm_progressive_economy_modifiers_help">
+		<text>Categories of goods (0.01 = 1%)</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_food_modifier">
-		<text>Food prices will grow by (0.01 = 1%)</text>
+		<text>Food prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_medicine_modifier">
-		<text>Medicine prices will grow by (0.01 = 1%)</text>
+		<text>Medicine prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_ammo_modifier">
-		<text>Ammo and explosive prices will grow by (0.01 = 1%)</text>
+		<text>Ammo and explosive prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_tools_modifier">
-		<text>Tools prices will grow by (0.01 = 1%)</text>
+		<text>Tools prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_weapons_modifier">
-		<text>Weapons prices will grow by (0.01 = 1%)</text>
+		<text>Weapons prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_outfits_modifier">
-		<text>Outfits prices will grow by (0.01 = 1%)</text>
+		<text>Outfits prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_general_modifier">
-		<text>Other prices will grow by (0.01 = 1%)</text>
+		<text>Other prices will grow by</text>
 	</string>
 	<string id="ui_mcm_progressive_economy_debug_mode">
 		<text>Enable Debug Mode</text>
