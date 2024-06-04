@@ -1,24 +1,24 @@
 function load_defaults()
-	local t = {}
-	local op = progressive_economy_mcm.op
-	for i, v in ipairs(op.gr) do
-		if v.def ~= nil then
-			t[v.id] = v.def
-		end
-	end
-	return t
+    local t = {}
+    local op = progressive_economy_mcm.op
+    for i, v in ipairs(op.gr) do
+        if v.def ~= nil then
+            t[v.id] = v.def
+        end
+    end
+    return t
 end
 
 settings = load_defaults()
 
 function load_settings()
-	settings = load_defaults()
-	if ui_mcm then
-		for k, v in pairs(settings) do
-			settings[k] = ui_mcm.get(progressive_economy_mcm.op_id .. "/" .. k)
-		end
-	end
-	return settings
+    settings = load_defaults()
+    if ui_mcm then
+        for k, v in pairs(settings) do
+            settings[k] = ui_mcm.get(progressive_economy_mcm.op_id .. "/" .. k)
+        end
+    end
+    return settings
 end
 
 local modifier_increment = 0
@@ -75,7 +75,6 @@ function get_modifier_by_kind(kind, modifiers_table)
     return settings.general_modifier
 end
 
-
 function ActorMenu_on_trade_started()
     -- in-game time in days since the start of the playthrough
     local ingame_time_days = math.floor(game.get_game_time():diffSec(level.get_start_time()) / 86400)
@@ -83,12 +82,11 @@ function ActorMenu_on_trade_started()
     modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
 end
 
-
 function on_get_item_cost(_, obj, profile, calculated_cost, ret)
     if profile.mode == 2 then -- buying from npc
-        local obj_kind = SYS_GetParam(0, obj:section(), "kind")    
+        local obj_kind = SYS_GetParam(0, obj:section(), "kind")
         local old_cost = ret.new_cost or calculated_cost
-        
+
         local multiplier = 1 + (get_modifier_by_kind(obj_kind, modifiers_table) * modifier_increment)
         ret.new_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.max_multiplier))
 
@@ -97,7 +95,6 @@ function on_get_item_cost(_, obj, profile, calculated_cost, ret)
         end
     end
 end
-
 
 function on_game_start()
     RegisterScriptCallback("ActorMenu_on_trade_started", ActorMenu_on_trade_started)
