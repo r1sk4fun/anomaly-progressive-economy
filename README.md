@@ -2,11 +2,12 @@
 
 ## What is this mod about?
 
-This mod was created to make economy more difficult. The aim of the mod is to imitate real life inflation. By default prices will grow once in 5 days by 5% with maximum of 200%. But you can tweak it in MCM settings as you like.
+This mod was created to make economy more difficult (though you can make it even easier if you want). The aim of the mod is to make dynamic economy based on time you spent in the Zone. By default prices will change every 3 days. Purchase prices will go up by 3% (won't go above 200% by default). Sale prices will go down by 3% (won't go below 50% of original cost by default). You can tweak it in MCM settings as you like.
 
 ## Settings preview
 
-![progressive-economy-mcm](https://github.com/r1sk4fun/anomaly-progressive-economy/assets/129798252/2f9c327f-30eb-42d8-b951-f4dba7ecf237)
+![settings-first-part](./preview/progressive-economy-part1.png)
+![settings-second-part](./preview/progressive-economy-part2.png)
 
 ## Requirements
 
