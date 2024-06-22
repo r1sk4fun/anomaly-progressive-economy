@@ -87,6 +87,11 @@ function ActorMenu_on_trade_started()
     local ingame_time_days = math.floor(game.get_game_time():diffSec(level.get_start_time()) / 86400)
     -- number of increments since the start of the playthrough
     modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
+
+    if settings.debug_mode then
+        printf("Ingame time (days): %s; Time to increment (days): %s; Modifier increment: %s", 
+        ingame_time_days, settings.days_to_increment, modifier_increment)
+    end
 end
 
 function on_get_item_cost(_, obj, profile, calculated_cost, ret)
@@ -97,7 +102,8 @@ function on_get_item_cost(_, obj, profile, calculated_cost, ret)
     ret.new_cost = round(old_cost * clamp(multiplier, 0, settings.max_multiplier))
 
     if settings.debug_mode then
-        printf("item: %s, kind: %s, old cost: %s, new cost: %s", obj:section(), obj_kind, old_cost, ret.new_cost)
+        printf("Item: %s; Kind: %s; Old cost: %s; New cost: %s",
+        obj:section(), obj_kind, old_cost, ret.new_cost)
     end
 end
 
