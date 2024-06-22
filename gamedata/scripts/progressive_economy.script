@@ -77,7 +77,7 @@ function get_modifier(profile_mode, kind, modifiers_table)
     for modifier_key, kinds_table in pairs(modifiers_table) do
         for kind_key, _ in pairs(kinds_table) do
             if kind_key == kind then
-                return settings[modifier_key .. mode]
+                return settings[modifier_key .. mode] or settings["general_modifier" .. mode]
             end
         end
     end
