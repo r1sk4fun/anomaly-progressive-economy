@@ -1,43 +1,67 @@
 <?xml version="1.0" encoding="windows-1251"?>
 
 <string_table>
-	<string id="ui_mcm_progressive_economy_title">
-		<text>Прогрессивная Экономика</text>
-	</string>
-	<string id="ui_mcm_menu_progressive_economy">
-		<text>Прогрессивная Экономика</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_days_to_increment">
-		<text>Скорость роста цен (в игровых днях)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_max_multiplier">
-		<text>Потолок роста цен (1 = 100%)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_modifiers_help">
-		<text>Категории товаров (0.01 = 1%)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_food_modifier">
-		<text>Цены на еду будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_medicine_modifier">
-		<text>Цены на медикаменты будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_ammo_modifier">
-		<text>Цены на патроны и взрывчатку будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_tools_modifier">
-		<text>Цены на инструменты будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_weapons_modifier">
-		<text>Цены на оружие будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_outfits_modifier">
-		<text>Цены на костюмы будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_general_modifier">
-		<text>Остальные цены будут расти на</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_debug_mode">
-		<text>Включить режим отладки</text>
-	</string>
+    <string id="ui_mcm_progressive_economy_title">
+        <text>Прогрессивная Экономика</text>
+    </string>
+    <string id="ui_mcm_menu_progressive_economy">
+        <text>Прогрессивная Экономика</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_days_to_increment">
+        <text>Скорость изменения цен (в игровых днях)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_max_multiplier">
+        <text>Потолок цен (1 = 100%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_modifiers_help_buy">
+        <text>Модификаторы изменения цен для покупки (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_food_modifier_buy">
+        <text>Цены на еду будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_medicine_modifier_buy">
+        <text>Цены на медикаменты будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_ammo_modifier_buy">
+        <text>Цены на патроны и взрывчатку будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_tools_modifier_buy">
+        <text>Цены на инструменты будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_weapons_modifier_buy">
+        <text>Цены на оружие будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_outfits_modifier_buy">
+        <text>Цены на костюмы будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_general_modifier_buy">
+        <text>Остальные цены будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_modifiers_help_sell">
+        <text>Модификаторы изменения цен для продажи (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_food_modifier_sell">
+        <text>Цены на еду будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_medicine_modifier_sell">
+        <text>Цены на медикаменты будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_ammo_modifier_sell">
+        <text>Цены на патроны и взрывчатку будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_tools_modifier_sell">
+        <text>Цены на инструменты будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_weapons_modifier_sell">
+        <text>Цены на оружие будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_outfits_modifier_sell">
+        <text>Цены на костюмы будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_general_modifier_sell">
+        <text>Остальные цены будут изменяться на</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_debug_mode">
+        <text>Включить режим отладки</text>
+    </string>
 </string_table>

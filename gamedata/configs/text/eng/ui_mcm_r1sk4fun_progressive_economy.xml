@@ -1,43 +1,67 @@
 <?xml version="1.0" encoding="windows-1251"?>
 
 <string_table>
-	<string id="ui_mcm_progressive_economy_title">
-		<text>Progressive Economy</text>
-	</string>
-	<string id="ui_mcm_menu_progressive_economy">
-		<text>Progressive Economy</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_days_to_increment">
-		<text>Price growth speed (in-game days)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_max_multiplier">
-		<text>Price ceiling (1 = 100%)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_modifiers_help">
-		<text>Categories of goods (0.01 = 1%)</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_food_modifier">
-		<text>Food prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_medicine_modifier">
-		<text>Medicine prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_ammo_modifier">
-		<text>Ammo and explosive prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_tools_modifier">
-		<text>Tools prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_weapons_modifier">
-		<text>Weapons prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_outfits_modifier">
-		<text>Outfits prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_general_modifier">
-		<text>Other prices will grow by</text>
-	</string>
-	<string id="ui_mcm_progressive_economy_debug_mode">
-		<text>Enable Debug Mode</text>
-	</string>
+    <string id="ui_mcm_progressive_economy_title">
+        <text>Progressive Economy</text>
+    </string>
+    <string id="ui_mcm_menu_progressive_economy">
+        <text>Progressive Economy</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_days_to_increment">
+        <text>Prices change speed (in-game days)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_max_multiplier">
+        <text>Prices ceiling (1 = 100%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_modifiers_help_buy">
+        <text>Modifiers for buying (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_food_modifier_buy">
+        <text>Food prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_medicine_modifier_buy">
+        <text>Medicine prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_ammo_modifier_buy">
+        <text>Ammo and explosive prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_tools_modifier_buy">
+        <text>Tools prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_weapons_modifier_buy">
+        <text>Weapons prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_outfits_modifier_buy">
+        <text>Outfits prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_general_modifier_buy">
+        <text>Other prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_modifiers_help_sell">
+        <text>Modifiers for selling (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_food_modifier_sell">
+        <text>Food prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_medicine_modifier_sell">
+        <text>Medicine prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_ammo_modifier_sell">
+        <text>Ammo and explosive prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_tools_modifier_sell">
+        <text>Tools prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_weapons_modifier_sell">
+        <text>Weapons prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_outfits_modifier_sell">
+        <text>Outfits prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_general_modifier_sell">
+        <text>Other prices will change by</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_debug_mode">
+        <text>Enable Debug Mode</text>
+    </string>
 </string_table>
