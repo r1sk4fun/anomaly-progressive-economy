@@ -11,7 +11,10 @@
         <text>Скорость изменения цен (в игровых днях)</text>
     </string>
     <string id="ui_mcm_progressive_economy_max_multiplier">
-        <text>Потолок цен (1 = 100%)</text>
+        <text>Максимальный уровень цен (1 = 100%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_min_multiplier">
+        <text>Минимальный уровень цен (0.01 = 1%)</text>
     </string>
     <string id="ui_mcm_progressive_economy_modifiers_help_buy">
         <text>Модификаторы изменения цен для покупки (0.01 = 1%)</text>

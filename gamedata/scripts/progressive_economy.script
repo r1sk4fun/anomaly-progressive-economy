@@ -101,7 +101,7 @@ function on_get_item_cost(_, obj, profile, calculated_cost, ret)
     local old_cost = ret.new_cost or calculated_cost
 
     local multiplier = 1 + (get_modifier(profile.mode, obj_kind, modifiers_table) * modifier_increment)
-    ret.new_cost = round(old_cost * clamp(multiplier, 0.1, settings.max_multiplier))
+    ret.new_cost = round(old_cost * clamp(multiplier, settings.min_multiplier, settings.max_multiplier))
 
     if settings.debug_mode then
         printf("Item: %s; Kind: %s; Old cost: %s; New cost: %s",

@@ -11,7 +11,10 @@
         <text>Prices change speed (in-game days)</text>
     </string>
     <string id="ui_mcm_progressive_economy_max_multiplier">
-        <text>Prices ceiling (1 = 100%)</text>
+        <text>Price ceiling (1 = 100%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_min_multiplier">
+        <text>Price floor (0.01 = 1%)</text>
     </string>
     <string id="ui_mcm_progressive_economy_modifiers_help_buy">
         <text>Modifiers for buying (0.01 = 1%)</text>
