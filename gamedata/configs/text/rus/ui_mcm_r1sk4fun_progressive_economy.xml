@@ -7,7 +7,7 @@
     <string id="ui_mcm_menu_progressive_economy">
         <text>Прогрессивная Экономика</text>
     </string>
-    <string id="ui_mcm_progressive_economy_days_to_increment">
+    <string id="ui_mcm_progressive_economy_increment_speed">
         <text>Скорость изменения цен (в игровых днях)</text>
     </string>
     <string id="ui_mcm_progressive_economy_max_multiplier">
