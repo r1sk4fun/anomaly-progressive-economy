@@ -91,7 +91,7 @@ function ActorMenu_on_trade_started()
     modifier_increment = math.floor(ingame_time_days / settings.increment_speed)
 
     if settings.debug_mode then
-        printf("Ingame time (days): %s; Time to increment (days): %s; Modifier increment: %s", 
+        printf("Ingame time (days): %s; Increment speed (days): %s; Modifier increment: %s", 
         ingame_time_days, settings.increment_speed, modifier_increment)
     end
 end
