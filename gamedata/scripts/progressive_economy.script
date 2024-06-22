@@ -1,3 +1,4 @@
+-- functions to load MCM settings
 function load_defaults()
     local t = {}
     local op = progressive_economy_mcm.op
@@ -64,35 +65,47 @@ local modifiers_table = {
     }
 }
 
-function get_modifier_by_kind(kind, modifiers_table)
+-- function to get the modifier based on the profile mode and item kind
+function get_modifier(profile_mode, kind, modifiers_table)
+    local mode = nil
+    if profile_mode == 1 then
+        mode = "_sell"
+    else
+        mode = "_buy"
+    end
+
     for modifier_key, kinds_table in pairs(modifiers_table) do
         for kind_key, _ in pairs(kinds_table) do
             if kind_key == kind then
-                return settings[modifier_key]
+                return settings[modifier_key .. mode] or settings["general_modifier" .. mode]
             end
         end
     end
-    return settings.general_modifier
+    return settings["general_modifier" .. mode]
 end
 
 function ActorMenu_on_trade_started()
     -- in-game time in days since the start of the playthrough
     local ingame_time_days = math.floor(game.get_game_time():diffSec(level.get_start_time()) / 86400)
-    -- number of increments since the start of the playthrough
-    modifier_increment = math.floor(ingame_time_days / settings.days_to_increment)
+    -- number of increments based on the ingame time
+    modifier_increment = math.floor(ingame_time_days / settings.increment_speed)
+
+    if settings.debug_mode then
+        printf("Ingame time (days): %s; Increment speed (days): %s; Modifier increment: %s", 
+        ingame_time_days, settings.increment_speed, modifier_increment)
+    end
 end
 
 function on_get_item_cost(_, obj, profile, calculated_cost, ret)
-    if profile.mode == 2 then -- buying from npc
-        local obj_kind = SYS_GetParam(0, obj:section(), "kind")
-        local old_cost = ret.new_cost or calculated_cost
+    local obj_kind = SYS_GetParam(0, obj:section(), "kind")
+    local old_cost = ret.new_cost or calculated_cost
 
-        local multiplier = 1 + (get_modifier_by_kind(obj_kind, modifiers_table) * modifier_increment)
-        ret.new_cost = math.ceil(old_cost * clamp(multiplier, 1, settings.max_multiplier))
+    local multiplier = 1 + (get_modifier(profile.mode, obj_kind, modifiers_table) * modifier_increment)
+    ret.new_cost = round(old_cost * clamp(multiplier, settings.min_multiplier, settings.max_multiplier))
 
-        if settings.debug_mode then
-            printf("item: %s, kind: %s, old cost: %s, new cost: %s", obj:section(), obj_kind, old_cost, ret.new_cost)
-        end
+    if settings.debug_mode then
+        printf("Item: %s; Kind: %s; Old cost: %s; New cost: %s",
+        obj:section(), obj_kind, old_cost, ret.new_cost)
     end
 end
 
