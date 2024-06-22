@@ -6,7 +6,8 @@ This mod was created to make economy more difficult (though you can make it even
 
 ## Settings preview
 
-https://imgur.com/a/F5NrwFJ
+![settings-first-part](./preview/progressive-economy-part1.png)
+![settings-second-part](./preview/progressive-economy-part2.png)
 
 ## Requirements
 
