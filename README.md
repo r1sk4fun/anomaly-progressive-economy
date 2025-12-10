@@ -20,7 +20,7 @@ Should be compatible with everything else (even with mods like Faction Based Eco
 
 ## Credit
 
-- **Dead Air - Inspiration.**
+- **Dead Air Devs - Inspiration.**
 
 - **TheMrDemonized - Borrowed code from Configurable Item Cost Modifiers.**
 
