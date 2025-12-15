@@ -4,11 +4,6 @@
 
 This mod was created to make economy more difficult (though you can make it even easier if you want). The aim of the mod is to make dynamic economy based on time you spent in the Zone. By default prices will change every 3 days. Purchase prices will go up by 3% (won't go above 200% by default). Sale prices will go down by 3% (won't go below 50% of original cost by default). You can tweak it in MCM settings as you like.
 
-## Settings preview
-
-![settings-first-part](./preview/progressive-economy-part1.png)
-![settings-second-part](./preview/progressive-economy-part2.png)
-
 ## Requirements
 
 Mod Configuration Menu (MCM) by RavenAscendant
@@ -25,7 +20,7 @@ Should be compatible with everything else (even with mods like Faction Based Eco
 
 ## Credit
 
-- **Dead Air - Inspiration.**
+- **Dead Air Devs - Inspiration.**
 
 - **TheMrDemonized - Borrowed code from Configurable Item Cost Modifiers.**
 
