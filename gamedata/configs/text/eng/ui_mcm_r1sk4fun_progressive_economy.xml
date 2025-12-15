@@ -19,6 +19,9 @@
     <string id="ui_mcm_progressive_economy_modifiers_help_buy">
         <text>Modifiers for buying (0.01 = 1%)</text>
     </string>
+    <string id="ui_mcm_progressive_economy_arty_modifier_buy">
+        <text>Artefacts prices will change by</text>
+    </string>
     <string id="ui_mcm_progressive_economy_food_modifier_buy">
         <text>Food prices will change by</text>
     </string>
@@ -42,6 +45,9 @@
     </string>
     <string id="ui_mcm_progressive_economy_modifiers_help_sell">
         <text>Modifiers for selling (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_arty_modifier_sell">
+        <text>Artefacts prices will change by</text>
     </string>
     <string id="ui_mcm_progressive_economy_food_modifier_sell">
         <text>Food prices will change by</text>

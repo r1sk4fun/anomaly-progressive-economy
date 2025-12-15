@@ -25,6 +25,11 @@ end
 local modifier_increment = 0
 
 local modifiers_table = {
+    ["arty_modifier"] = {
+        ["i_arty"] = true,
+        ["i_arty_junk"] = true
+    },
+
     ["food_modifier"] = {
         ["i_food"] = true,
         ["i_drink"] = true,
