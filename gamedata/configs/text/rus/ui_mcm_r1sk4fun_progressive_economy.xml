@@ -19,6 +19,9 @@
     <string id="ui_mcm_progressive_economy_modifiers_help_buy">
         <text>Модификаторы изменения цен для покупки (0.01 = 1%)</text>
     </string>
+    <string id="ui_mcm_progressive_economy_arty_modifier_buy">
+        <text>Цены на артефакты будут изменяться на</text>
+    </string>
     <string id="ui_mcm_progressive_economy_food_modifier_buy">
         <text>Цены на еду будут изменяться на</text>
     </string>
@@ -42,6 +45,9 @@
     </string>
     <string id="ui_mcm_progressive_economy_modifiers_help_sell">
         <text>Модификаторы изменения цен для продажи (0.01 = 1%)</text>
+    </string>
+    <string id="ui_mcm_progressive_economy_arty_modifier_sell">
+        <text>Цены на артефакты будут изменяться на</text>
     </string>
     <string id="ui_mcm_progressive_economy_food_modifier_sell">
         <text>Цены на еду будут изменяться на</text>
